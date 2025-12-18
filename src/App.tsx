@@ -14,7 +14,6 @@ const App: React.FC = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Compute filtered products efficiently
   const filteredProducts = useMemo(() => {
     let filtered = products;
     if (filters.category) {
@@ -119,7 +118,6 @@ const App: React.FC = () => {
             </div>
           </aside>
 
-          {/* Mobile Filter Panel - Overlay */}
           {isFilterOpen && (
             <FilterPanel
               categories={categories}
@@ -130,7 +128,6 @@ const App: React.FC = () => {
             />
           )}
 
-          {/* Products Grid */}
           <main className="flex-1 min-w-0">
             <div className="mb-6 sm:mb-8">
               <h2 className="text-2xl sm:text-3xl font-black text-gray-800 mb-2">

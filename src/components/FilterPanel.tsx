@@ -10,10 +10,7 @@ interface FilterPanelProps {
   onClose: () => void;
 }
 
-/**
- * FilterPanel Component - Modern styled filter sidebar
- * Features: Gradient styling, animated slider, smooth transitions
- */
+
 export const FilterPanel: React.FC<FilterPanelProps> = ({ 
   categories, 
   filters, 

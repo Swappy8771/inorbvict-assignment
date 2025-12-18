@@ -10,10 +10,7 @@ interface CartSummaryProps {
   onRemoveItem: (id: number) => void;
 }
 
-/**
- * CartSummary Component - Enhanced shopping cart with quantity controls
- * Features: Add/remove items, quantity controls, savings calculation, gradient styling
- */
+
 export const CartSummary: React.FC<CartSummaryProps> = ({ 
   cart, 
   isOpen, 
@@ -41,10 +38,8 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
         )}
       </button>
 
-      {/* Cart Sidebar */}
       {isOpen && (
         <>
-          {/* Background Overlay */}
           <div
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 animate-in fade-in duration-300"
             onClick={onToggle}
@@ -71,10 +66,8 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
               </p>
             </div>
 
-            {/* Cart Items List */}
             <div className="flex-1 overflow-y-auto p-6 space-y-4">
               {cart.length === 0 ? (
-                // Empty Cart State
                 <div className="text-center py-20">
                   <div className="inline-block p-6 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl mb-4">
                     <ShoppingCart size={64} className="text-gray-400" />
@@ -108,7 +101,6 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
                           ${(item.price * item.quantity).toFixed(2)}
                         </div>
 
-                        {/* Quantity Controls */}
                         <div className="flex items-center gap-3">
                           <div className="flex items-center gap-2 bg-white rounded-xl border-2 border-gray-200 p-1">
                             <button
@@ -146,7 +138,6 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
               )}
             </div>
 
-            {/* Footer - Totals and Checkout */}
             {cart.length > 0 && (
               <div className="p-6 border-t border-gray-100 bg-gradient-to-br from-gray-50 to-white space-y-4">
                 {/* Subtotal */}
@@ -176,7 +167,6 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
                   Proceed to Checkout
                 </button>
                 
-                {/* Continue Shopping */}
                 <button 
                   onClick={onToggle}
                   className="w-full px-4 py-3 text-gray-600 font-semibold hover:text-gray-800 transition-colors rounded-lg hover:bg-gray-50"
