@@ -59,7 +59,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
           <select
             value={filters.category}
             onChange={(e) => onFilterChange('category', e.target.value)}
-            className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all font-medium bg-gray-50 hover:bg-white cursor-pointer"
+            className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all font-medium bg-gray-50 hover:bg-white cursor-pointer"
           >
             <option value="">All Categories</option>
             {categories.map((cat) => (
@@ -76,7 +76,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
             <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">
               Price Range
             </label>
-            <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold rounded-full">
+            <span className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold rounded-full">
               ${filters.maxPrice}
             </span>
           </div>

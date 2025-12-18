@@ -102,23 +102,23 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
                         </div>
 
                         <div className="flex items-center gap-3">
-                          <div className="flex items-center gap-2 bg-white rounded-xl border-2 border-gray-200 p-1">
+                          <div className="flex items-center gap-3 bg-white rounded-xl border-2 border-gray-200 p-2">
                             <button
                               onClick={() => onUpdateQuantity(item.id, -1)}
-                              className="p-2 hover:bg-blue-50 rounded-lg transition-colors active:scale-90"
+                              className="p-3 hover:bg-blue-50 rounded-lg transition-colors active:scale-90"
                               aria-label="Decrease quantity"
                             >
-                              <Minus size={18} className="text-blue-600" />
+                              <Minus size={20} className="text-blue-600" />
                             </button>
                             <span className="w-8 text-center font-bold text-gray-800">
                               {item.quantity}
                             </span>
                             <button
                               onClick={() => onUpdateQuantity(item.id, 1)}
-                              className="p-2 hover:bg-blue-50 rounded-lg transition-colors active:scale-90"
+                              className="p-3 hover:bg-blue-50 rounded-lg transition-colors active:scale-90"
                               aria-label="Increase quantity"
                             >
-                              <Plus size={18} className="text-blue-600" />
+                              <Plus size={20} className="text-blue-600" />
                             </button>
                           </div>
 

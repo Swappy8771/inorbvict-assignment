@@ -34,15 +34,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }
         
         {/* Wishlist Button */}
         <button 
-          className="absolute top-4 right-4 p-2.5 bg-white/90 backdrop-blur-sm rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-50 hover:scale-110"
+          className="absolute top-4 right-4 p-3 bg-white/90 backdrop-blur-sm rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-50 hover:scale-110"
           aria-label="Add to wishlist"
         >
-          <Heart size={18} className="text-gray-600 hover:text-red-500" />
+          <Heart size={20} className="text-gray-600 hover:text-red-500" />
         </button>
 
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="px-3.5 py-1.5 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full shadow-lg capitalize">
+          <span className="px-4 py-2 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full shadow-lg capitalize">
             {product.category}
           </span>
         </div>
@@ -61,8 +61,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }
       <div className="p-4 sm:p-5 flex flex-col flex-1">
         {/* Rating */}
         <div className="flex items-center gap-2 mb-2">
-          <div className="flex items-center gap-1">
-            <Star size={14} className="fill-yellow-400 text-yellow-400" />
+          <div className="flex items-center gap-2">
+            <Star size={16} className="fill-yellow-400 text-yellow-400" />
             <span className="text-sm font-semibold text-gray-700">{product.rating.rate}</span>
           </div>
           <span className="text-xs text-gray-400">({product.rating.count})</span>
